@@ -1377,6 +1377,7 @@ inline void* cpp_alloc(size_t size, bool nothrow) {
 #else
       // If no new_handler is established, the allocation failed.
       if (!nh) {
+        return 0; // for throw test
         if (nothrow) return 0;
         throw std::bad_alloc();
       }
