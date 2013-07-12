@@ -129,10 +129,10 @@ int SymbolTable::Symbolize() {
     PrintError("Cannot figure out the name of this executable (argv0)");
     return 0;
   }
-  if (access(g_pprof_path->c_str(), R_OK) != 0) {
-    PrintError("Cannot find 'pprof' (is PPROF_PATH set correctly?)");
-    return 0;
-  }
+  //if (access(g_pprof_path->c_str(), R_OK) != 0) {
+  //  PrintError("Cannot find 'pprof' (is PPROF_PATH set correctly?)");
+  //  return 0;
+  //}
 
   // All this work is to do two-way communication.  ugh.
   int *child_in = NULL;   // file descriptors
